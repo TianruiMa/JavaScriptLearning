@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9175665d-cd22-4ab1-9d71-c402e08f373d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/objects/const.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/objects/number-methods.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/objects/objects-101.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/objects/objects-functions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/objects/objects-methods.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/objects/objects-references.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/objects/string-methods.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/JavaScriptLearning.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -77,11 +74,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="const.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="const.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/objects/const.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
               <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -124,6 +130,7 @@
         <option value="$PROJECT_DIR$/objects/string-methods.js" />
         <option value="$PROJECT_DIR$/objects/number-methods.js" />
         <option value="$PROJECT_DIR$/objects/const.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -206,12 +213,12 @@
       <option name="presentableId" value="Default" />
       <updated>1525424867927</updated>
       <workItem from="1525424869229" duration="1912000" />
-      <workItem from="1525426853219" duration="3327000" />
+      <workItem from="1525426853219" duration="3749000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5239000" />
+    <option name="totallyTimeSpent" value="5661000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="624" y="0" width="1056" height="1050" extended-state="6" />
@@ -358,6 +365,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
         </state>
       </provider>
     </entry>
