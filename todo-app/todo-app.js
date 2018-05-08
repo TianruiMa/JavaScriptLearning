@@ -1,20 +1,5 @@
 
-const ToDos = [{
-    text: 'Order cat food',
-    completed: false
-}, {
-    text: 'Clean kitchen',
-    completed: true
-}, {
-    text: 'Buy food',
-    completed: true
-}, {
-    text: 'Do work',
-    completed: false
-}, {
-    text: 'Exercise',
-    completed: true
-}];
+let ToDos = [];
 
 const filters = {
     searchText:'',
@@ -24,6 +9,11 @@ const filters = {
 const htmlBody = document.querySelector('body');
 const searchToDoDiv = document.querySelector('#search-todo-div');
 
+
+const ToDosJSON = localStorage.getItem('todos');
+if (ToDosJSON !== null){
+    ToDos = JSON.parse(ToDosJSON);
+}
 
 const renderToDos = function(todos, filters){
 
@@ -49,6 +39,7 @@ const renderToDos = function(todos, filters){
         searchToDoDiv.appendChild(filteredTodo)
     });
 };
+
 renderToDos(ToDos,filters);
 
 document.querySelector('#search-todo').addEventListener('input',function (e) {
@@ -63,6 +54,7 @@ document.querySelector('#new-todo').addEventListener('submit', function (e) {
         completed :false
     };
     ToDos.push(newToDo);
+    localStorage.setItem('todos', JSON.stringify(ToDos));
     renderToDos(ToDos,filters);
     e.target.elements.newToDoText.value = ''
 });

@@ -1,14 +1,5 @@
 
-const notes = [{
-    title: 'My next trip',
-    body: 'I would like to go to Spain'
-}, {
-    title: 'Habits to work on',
-    body: 'Exercise. Eating a bit better'
-}, {
-    title: 'Office modification',
-    body: 'Get a new seat'
-}];
+let notes = getSaveNotes();
 
 const body = document.querySelector('body');
 const filteredNotesDiv = document.querySelector('#filtered-notes');
@@ -41,10 +32,10 @@ const renderNotes = function (notes, filters){
 
     filteredNotesDiv.innerHTML = '';
 
-    filteredNotes.forEach(function (filterNote) {
-        const noteTitle = document.createElement('p');
-        noteTitle.textContent = filterNote.title;
-        filteredNotesDiv.appendChild(noteTitle);
+
+    filteredNotes.forEach(function (note) {
+        const noteElement = GenerateNoteDOM(note);
+        filteredNotesDiv.appendChild(noteElement);
     })
 };
 
@@ -52,11 +43,18 @@ renderNotes(notes,filters);
 
 // addEventListener (GestureName, function)
 document.querySelector('#create-note').addEventListener('click',function (e) {
-    e.target.textContent = 'New Note Created'
+    notes.push({
+        title: '',
+        body: ''
+    });
+
+    localStorage.setItem('notes', JSON.stringify(notes));
+    renderNotes(notes,filters);
 });
 
 document.querySelector('#search-text').addEventListener('input',function (e) {
     filters.searchText = e.target.value;
+    console.log(filters);
     renderNotes(notes,filters)
 });
 
