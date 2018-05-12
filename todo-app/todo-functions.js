@@ -49,7 +49,7 @@ const toggleToDo = function(id){
     const todo = ToDos.find(function (item) {
         return item.id === id;
     });
-    
+
     if (todo !== undefined) todo.completed = !todo.completed;
 };
 

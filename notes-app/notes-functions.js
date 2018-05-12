@@ -5,7 +5,7 @@ const filteredNotesDiv = document.querySelector('#filtered-notes');
 
 
 // Read existing notes from localStorage
-const getSaveNotes = function () {
+const getSavedNotes = function () {
     const notesJSON = localStorage.getItem('notes');
     if (notesJSON !== null){
         return JSON.parse(notesJSON)
@@ -31,8 +31,8 @@ const removeNote = function (id) {
 // Generate the DOM structure for a note
 const GenerateNoteDOM = function (note) {
     const noteDivElement = document.createElement('div');
-    const noteTitleElement = document.createElement('span');
     const noteDeleteButton = document.createElement('button');
+    const noteTitleElement = document.createElement('a');
 
     noteDeleteButton.textContent = 'x';
     noteDeleteButton.addEventListener('click',function () {
@@ -47,6 +47,10 @@ const GenerateNoteDOM = function (note) {
     } else {
         noteTitleElement.textContent = 'Unnamed Note'
     }
+    noteTitleElement.setAttribute('href',`/edit.html#${note.id}`);
+    // noteTitleElement.addEventListener('click',function () {
+    //     location.assign('/edit.html')
+    // });
     noteDivElement.appendChild(noteTitleElement);
 
     return noteDivElement;

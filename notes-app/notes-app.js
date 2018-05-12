@@ -1,5 +1,5 @@
 
-let notes = getSaveNotes();
+let notes = getSavedNotes();
 
 
 const filters = {
@@ -10,10 +10,13 @@ renderNotes(notes,filters);
 
 // addEventListener (GestureName, function)
 document.querySelector('#create-note').addEventListener('click',function (e) {
-    notes.push({id: uuidv4(), title: '', body: ''});
+    const noteId = uuidv4();
+    notes.push({id: noteId, title: '', body: ''});
     saveNotes(notes);
-    renderNotes(notes,filters);
+    // renderNotes(notes,filters);
+    location.assign(`/edit.html#${noteId}`)
 });
+
 
 document.querySelector('#search-text').addEventListener('input',function (e) {
     filters.searchText = e.target.value;
@@ -24,7 +27,14 @@ document.querySelector('#filter-by').addEventListener('change', function (e) {
     console.log(e.target.value)
 });
 
+window.addEventListener('storage', function (e) {
+    if (e.key === 'notes'){
+        notes = JSON.parse(e.newValue);
+        renderNotes(notes,filters);
+    }
+});
 
+// Unix Epoch - January 1st 1970 00:00:00
 
 // -- Single --
 // p
